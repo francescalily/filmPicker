@@ -10,6 +10,7 @@ const App = () => {
     <Routes>
       <Route path="/" element={<Header />}>
         <Route index element={<Pages.HomePage />} />
+        <Route path="/films" element={<Pages.FilmsPage />} />
       </Route>
     </Routes>
   );
