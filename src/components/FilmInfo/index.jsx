@@ -14,7 +14,7 @@ export default function FilmInfo() {
         return response.json();
       })
       .then((data) => {
-        setFilm(data);
+        setFilm(data.Search);
         setLoading(false);
       })
       .catch((error) => {
@@ -29,24 +29,12 @@ export default function FilmInfo() {
   return (
     <>
       <div>
-        {
-          film.map((f) => (
-            <div key={f.imdbID}>
-              <h2>{f.Title}</h2>
-              <img src={f.Poster} alt={f.Title} />
-            </div>
-          ))
-          /* {
-          film
-            ? film.map((f) => (
-                <div key={f.imdbID}>
-                  <h2>{f.Title}</h2>
-                  <img src={f.Poster} alt={f.Title} />
-                </div>
-              ))
-            : null
-        } */
-        }
+        {film.map((f) => (
+          <div key={f.imdbID}>
+            <h2>{f.Title}</h2>
+            <img src={f.Poster} alt={f.Title} />
+          </div>
+        ))}
       </div>
     </>
   );
