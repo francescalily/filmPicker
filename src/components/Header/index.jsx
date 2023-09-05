@@ -14,7 +14,7 @@ export default function Header() {
           <NavLink to="/" style={styles}>
             Home
           </NavLink>
-          <NavLink to="/fims" style={styles}>
+          <NavLink to="/films" style={styles}>
             Films
           </NavLink>
           <NavLink to="/search" style={styles}>
